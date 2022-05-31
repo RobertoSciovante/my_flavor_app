@@ -19,9 +19,5 @@ jobs:
       - name: Upload APP
         uses: actions/upload-artifact@v1
         with:
-          name: app
-          path: build/ios/iphoneos/runner-development-debug.app
-
-#          path: /home/runner/work/my_flavor_app/my_flavor_app/build/ios/iphoneos/app-development-debug.app
-
-#          path: build/ios/iphoneos/app-development-debug.app
+          name: ios-development-debug.app
+          path: build/ios/iphoneos/Runner.app

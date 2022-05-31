@@ -1,0 +1,23 @@
+name: Build_ios_Development_Debug
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build_ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.0.1'
+          architecture: x64
+      - run: flutter pub get
+#      - run: flutter test
+      - run: flutter build ios --debug --no-codesign --flavor development
+      - name: Upload APP
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: build/ios/iphoneos/app-development-debug.app

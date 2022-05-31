@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: development-debug-apk
-          path: build/app/outputs/flutter-apk/app-development-debug.apk
+          path: /home/runner/work/my_flavor_app/my_flavor_app/build/app/outputs/flutter-apk/app-development-debug.apk
